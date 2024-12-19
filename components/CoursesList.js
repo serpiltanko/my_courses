@@ -13,8 +13,8 @@ const CoursesList = ({ courses }) => {
   return <FlatList
   data={courses}
   keyExtractor={(item)=>item.id}
-    renderItem={renderCourseItem}
-
+  renderItem={renderCourseItem}
+  showsVerticalScrollIndicator={false}
   
   />;
 };

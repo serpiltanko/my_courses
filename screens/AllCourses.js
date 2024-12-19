@@ -7,7 +7,7 @@ import { CoursesContext } from "../store/coursesContext";
 const AllCourses = () => {
   const coursesContext = useContext(CoursesContext);
 
-  return <Courses  courses={coursesContext.courses}  coursesPeriod="Hepsi" />;
+  return <Courses  courses={coursesContext.courses}  coursesPeriod="Hepsi"  nullText="Herhangi Bir Kursa Kayıtlı Değilsiniz" />;
 };
 
 export default AllCourses;
