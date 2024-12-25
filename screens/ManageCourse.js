@@ -57,25 +57,18 @@ const ManageCourse = ({ route, navigation }) => {
     setError(null);
 
     try {
-      
-    if (isEditing) {
-      coursesContext.updateCourse(courseId, courseData);
-      await updateCourse(courseId, courseData);
-    } else {
-      const id = await storeCourse(courseData);
-      coursesContext.addCourse({ ...courseData, id: id });
-    }
-    navigation.goBack();
-      
+      if (isEditing) {
+        coursesContext.updateCourse(courseId, courseData);
+        await updateCourse(courseId, courseData);
+      } else {
+        const id = await storeCourse(courseData);
+        coursesContext.addCourse({ ...courseData, id: id });
+      }
+      navigation.goBack();
     } catch (error) {
       setError("Kurs eklemede ve ya güncellemede hata var.");
       setIsSubmitting(false);
     }
-
-
-
-
-
   }
 
   if (isSubmitting) {

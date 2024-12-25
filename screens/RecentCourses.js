@@ -15,14 +15,12 @@ const RecentCourses = () => {
   const [error, setError] = useState();
 
   useEffect(() => {
-
-    setError(null)
+    setError(null);
     async function takeCourses() {
       setIsFetching(true);
 
       try {
         const courses = await getCourses();
-
         coursesContext.setCourse(courses);
       } catch (error) {
         setError("Kursları Çekemedik.");
@@ -34,10 +32,9 @@ const RecentCourses = () => {
     takeCourses();
   }, []);
 
-if(error && !isFetching){
-return <ErrorText message={error}/>
-}
-
+  if (error && !isFetching) {
+    return <ErrorText message={error} />;
+  }
 
   if (isFetching) {
     return <LoadingSpinner />;

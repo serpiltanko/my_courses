@@ -22,10 +22,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.serpiltanko.my_courses",
+      
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ff6a65d5-7d51-4557-9a50-0b0cae0b0906"
+      }
     }
   }
 }
